@@ -13,7 +13,7 @@ kvs = {k: v for k, *v in [re.findall(r"\w{3}", line) for line in maps.splitlines
 
 def calculate_cycle_lengths(
     state: str, end_cond: str, kvs: dict[str, list[str]] = kvs, dirs: str = dirs
-) -> int:
+) -> int | None:
     for d, i in zip(cycle(dirs.replace("L", "0").replace("R", "1")), count(1)):
         state = kvs[state][int(d)]
         if state.endswith(end_cond):

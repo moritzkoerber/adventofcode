@@ -4,7 +4,7 @@ with open("data.txt") as f:
     signal = f.read()
 
 
-def search_signal(signal_string: str, signal_length: int) -> int:
+def search_signal(signal_string: str, signal_length: int) -> int | None:
     c = signal_string[: signal_length - 1]
     for i in signal_string[signal_length - 1 :]:
         if i in c:

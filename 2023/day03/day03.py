@@ -8,7 +8,7 @@ grid = pathlib.Path("data.txt").read_text().splitlines()
 dim1, dim2 = len(grid) - 1, len(grid[0]) - 1
 
 
-def check_surrounding(num_positions: list[list]) -> list:
+def check_surrounding(num_positions: list[list[int]]) -> list[tuple[int, int, str]]:
     return [
         (i, j, grid[i][j])
         for v, h in num_positions
