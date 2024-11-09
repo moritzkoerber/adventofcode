@@ -31,7 +31,7 @@ total = 0
 all_dir_sizes = []
 
 
-def parse_path_size(path: dict | int) -> int:
+def parse_path_size(path: dict[str, dict | int] | int) -> int:
     if isinstance(path, int):
         return path
     if isinstance(path, dict):
