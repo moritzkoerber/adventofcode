@@ -15,7 +15,9 @@ matrix_t = [
 ]
 
 
-def move_func(input_matrix: list, order: int, s1: int, s2: int, cnt: int) -> None:
+def move_func(
+    input_matrix: list[list[str]], order: int, s1: int, s2: int, cnt: int
+) -> None:
     input_matrix[s1 - 1].extend(input_matrix[s2 - 1][-cnt:][::order])
     input_matrix[s2 - 1] = input_matrix[s2 - 1][:-cnt]
 
