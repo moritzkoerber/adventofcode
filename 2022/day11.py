@@ -2,9 +2,9 @@
 ## Part 1
 import copy
 import re
+from collections.abc import Callable
 from dataclasses import dataclass
 from functools import reduce
-from typing import Callable
 
 
 @dataclass

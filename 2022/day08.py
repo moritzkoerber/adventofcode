@@ -1,7 +1,7 @@
 # Python
 ## Part 1
 
-from typing import Sequence
+from collections.abc import Sequence
 
 with open("data.txt") as f:
     trees = f.read().splitlines()

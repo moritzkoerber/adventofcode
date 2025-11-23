@@ -1,9 +1,9 @@
 # Part 1
 import math
 from collections import defaultdict, deque
+from collections.abc import Generator
 from heapq import heappop, heappush
 from pathlib import Path
-from typing import Generator
 
 p_input = Path("data.txt").read_text().splitlines()
 

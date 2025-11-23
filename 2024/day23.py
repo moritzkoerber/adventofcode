@@ -44,4 +44,4 @@ def find_cliques(conns: dict[str, set[str]]) -> set[tuple[str, ...]]:
     return found
 
 
-print(",".join(sorted((max(find_cliques(conns), key=len)))))
+print(",".join(sorted(max(find_cliques(conns), key=len))))
