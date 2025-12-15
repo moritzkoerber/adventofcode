@@ -1,39 +1,40 @@
 # Python
 ## Part 1
 
-from collections.abc import Sequence
-
 with open("data.txt") as f:
     trees = f.read().splitlines()
 
-trees_t = list(map("".join, zip(*trees)))
-
 
 def calculate_visibility(tree_row: str) -> list[bool]:
+    m = max(tree_row)
     return [
         (i == 0)
         or (i == len(tree_row) - 1)
-        or (j > max(tree_row[:i]) and i <= tree_row.index(max(tree_row)))
-        or (j > max(tree_row[i + 1 :]) and i >= tree_row.rfind(max(tree_row)))
+        or (i <= tree_row.index(m) and j > max(tree_row[:i]))
+        or (i >= tree_row.rfind(m) and j > max(tree_row[i + 1 :]))
         for i, j in enumerate(tree_row)
     ]
 
 
-horizontal_rows = [res for tree_row in trees for res in calculate_visibility(tree_row)]
+horizontal_rows = [
+    tree_visibility
+    for tree_row in trees
+    for tree_visibility in calculate_visibility(tree_row)
+]
+
+trees_t = list(map("".join, zip(*trees)))
 
 vertical_rows = [
-    res
-    for sublist in map(
-        list, zip(*[calculate_visibility(tree_row) for tree_row in trees_t])
-    )
-    for res in sublist
+    tree_visibility
+    for tree_row in zip(*map(calculate_visibility, trees_t))
+    for tree_visibility in tree_row
 ]
 
 print(sum(i or j for i, j in zip(horizontal_rows, vertical_rows)))
 
 
 ## Part 2
-def calculate_distance(tree_row: Sequence) -> list[int]:
+def calculate_distance(tree_row: str) -> list[int]:
     return [
         ([e >= j for e in tree_row[1:i][::-1] + j].index(True) + 1)
         * (i != 0)
@@ -43,14 +44,14 @@ def calculate_distance(tree_row: Sequence) -> list[int]:
     ]
 
 
-horizontal_rows = [res for tree_row in trees for res in calculate_distance(tree_row)]
+horizontal_rows = [
+    scenic_score for tree_row in trees for scenic_score in calculate_distance(tree_row)
+]
 
 vertical_rows = [
-    res
-    for sublist in map(
-        list, zip(*[calculate_distance(tree_row) for tree_row in trees_t])
-    )
-    for res in sublist
+    scenic_score
+    for tree_row in zip(*map(calculate_distance, trees_t))
+    for scenic_score in tree_row
 ]
 
 print(max(i * j for i, j in zip(horizontal_rows, vertical_rows)))
