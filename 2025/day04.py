@@ -2,7 +2,7 @@
 import itertools
 import pathlib
 
-p_input = pathlib.Path("data.txt").read_text().splitlines()
+p_input = pathlib.Path("day04.txt").read_text().splitlines()
 
 positions = {
     (i, j): p_input[i][j]

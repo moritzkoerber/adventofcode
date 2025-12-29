@@ -2,7 +2,7 @@
 import pathlib
 from functools import cache
 
-p_input = pathlib.Path("data.txt").read_text().splitlines()
+p_input = pathlib.Path("day03.txt").read_text().splitlines()
 
 
 @cache

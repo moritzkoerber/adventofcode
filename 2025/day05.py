@@ -1,10 +1,9 @@
 # Part 1
 import pathlib
 
-ranges, ids = pathlib.Path("data.txt").read_text().split("\n\n")
+ranges, ids = pathlib.Path("day05.txt").read_text().split("\n\n")
 
 valid_ids = [[*map(int, p.split("-"))] for p in ranges.splitlines()]
-
 
 print(
     sum(

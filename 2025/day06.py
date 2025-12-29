@@ -1,7 +1,7 @@
 # Part 1
 import pathlib
 
-p_input = pathlib.Path("data.txt").read_text().splitlines()
+p_input = pathlib.Path("day06.txt").read_text().splitlines()
 *nums, ops = map(str.split, p_input)
 
 total = 0

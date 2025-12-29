@@ -2,7 +2,7 @@
 import pathlib
 from functools import cache
 
-first, *lines = pathlib.Path("data.txt").read_text().splitlines()
+first, *lines = pathlib.Path("day07.txt").read_text().splitlines()
 beams = [e == "S" for e in first]
 
 total = 0

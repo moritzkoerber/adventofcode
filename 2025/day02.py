@@ -1,7 +1,7 @@
 # Part 1 + 2
 import pathlib
 
-p_input = pathlib.Path("data.txt").read_text()
+p_input = pathlib.Path("day02.txt").read_text()
 
 product_ids = [
     str(product_id)

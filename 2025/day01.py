@@ -4,7 +4,7 @@ import re
 
 p_input = [
     int(re.search(r"-?\d+", line.replace("L", "-"))[0])
-    for line in pathlib.Path("data.txt").read_text().splitlines()
+    for line in pathlib.Path("day01.txt").read_text().splitlines()
 ]
 
 dial = 50

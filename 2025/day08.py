@@ -2,7 +2,8 @@
 import math
 import pathlib
 
-p_input = pathlib.Path("data.txt").read_text().splitlines()
+p_input = pathlib.Path("day08.txt").read_text().splitlines()
+
 boxes = [tuple(map(int, row.split(","))) for row in p_input]
 
 closest_boxes = sorted(
