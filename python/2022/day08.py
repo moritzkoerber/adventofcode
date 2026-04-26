@@ -1,7 +1,7 @@
 # Python
 ## Part 1
 
-with open("data.txt") as f:
+with open("day08.txt") as f:
     trees = f.read().splitlines()
 
 
