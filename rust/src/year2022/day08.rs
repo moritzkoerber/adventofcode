@@ -1,4 +1,6 @@
 // Part 1
+#![allow(clippy::needless_range_loop)]
+
 use std::collections::HashSet;
 use std::fs;
 

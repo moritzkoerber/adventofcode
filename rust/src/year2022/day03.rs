@@ -18,7 +18,7 @@ pub fn run() {
     for c in compartments.lines() {
         let i = c.chars().count() / 2;
         let f = count_overlap(&c[0..i], &c[i..]);
-        total = total + f;
+        total += f;
     }
     println!("{}", total)
 }
