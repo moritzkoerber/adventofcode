@@ -1,7 +1,5 @@
-use std::fs;
-
 pub fn run() {
-    let p_input: String = fs::read_to_string("data/2022/day02.txt").unwrap();
+    let p_input = crate::input::read(2022, 2);
     let mut outcomes_numeric = Vec::new();
 
     for game in p_input.lines() {

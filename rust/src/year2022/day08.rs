@@ -2,10 +2,9 @@
 #![allow(clippy::needless_range_loop)]
 
 use std::collections::HashSet;
-use std::fs;
 
 pub fn run() {
-    let input = fs::read_to_string("data/2022/day08.txt").unwrap();
+    let input = crate::input::read(2022, 8);
     let p_input: Vec<Vec<i16>> = input
         .lines()
         .map(|line| {

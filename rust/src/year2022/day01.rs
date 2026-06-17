@@ -1,8 +1,6 @@
 // Part 1 + 2
-use std::fs;
-
 pub fn run() {
-    let p_input: String = fs::read_to_string("data/2022/day01.txt").unwrap();
+    let p_input = crate::input::read(2022, 1);
     let mut calories_by_elf: Vec<u32> = p_input
         .split("\n\n")
         .map(|block| block.lines().map(|line| line.parse::<u32>().unwrap()).sum())
