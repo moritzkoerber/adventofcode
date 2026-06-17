@@ -14,19 +14,3 @@ print(calories_by_elf[-1])
 
 ## Part 2
 print(sum(calories_by_elf[-3:]))
-
-# Pandas
-## Part 1
-import pandas
-
-calories_by_elf = (
-    pandas.read_table("day01.txt", header=None, skip_blank_lines=False)
-    .assign(elf_no=lambda x: x[0].isna().cumsum())
-    .groupby("elf_no")
-    .sum()[0]
-    .sort_values()
-)
-calories_by_elf.max()
-
-## Part 2
-calories_by_elf.tail(3).sum()
