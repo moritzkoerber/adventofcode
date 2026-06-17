@@ -5,7 +5,7 @@ from pathlib import Path
 
 robots = [
     list(map(int, re.findall(r"-?\d+", line)))
-    for line in Path("data.txt").read_text().splitlines()
+    for line in Path("day14.txt").read_text().splitlines()
 ]
 
 grid_v, grid_h = 103, 101

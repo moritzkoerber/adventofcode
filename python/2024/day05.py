@@ -1,7 +1,7 @@
 # Part 1
 from pathlib import Path
 
-rules, pages = Path("data.txt").read_text().split("\n\n")
+rules, pages = Path("day05.txt").read_text().split("\n\n")
 
 pages = [page.split(",") for page in pages.splitlines()]
 

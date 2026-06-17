@@ -2,7 +2,7 @@
 import pathlib
 from collections import Counter
 
-read_input = pathlib.Path("data.txt").read_text()
+read_input = pathlib.Path("day07.txt").read_text()
 
 input_values = {
     hand: int(bet) for hand, bet in [line.split() for line in read_input.splitlines()]

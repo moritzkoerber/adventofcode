@@ -1,7 +1,7 @@
 # Part 1
 from pathlib import Path
 
-p_input = [row.split(": ") for row in Path("data.txt").read_text().splitlines()]
+p_input = [row.split(": ") for row in Path("day07.txt").read_text().splitlines()]
 
 
 def solve(equations: str, is_part2: bool) -> list[int]:

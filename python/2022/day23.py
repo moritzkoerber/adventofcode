@@ -5,7 +5,7 @@ from collections import Counter
 
 elves = {
     (i, k)
-    for i, j in enumerate(pathlib.Path("data.txt").read_text().splitlines())
+    for i, j in enumerate(pathlib.Path("day23.txt").read_text().splitlines())
     for k, l in enumerate(j)
     if l == "#"
 }

@@ -1,6 +1,6 @@
 # Python
 ## Part 1
-with open("data.txt") as f:
+with open("day20.txt") as f:
     moves = list(map(int, f.read().splitlines()))
 
 

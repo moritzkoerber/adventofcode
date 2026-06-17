@@ -2,7 +2,7 @@
 from functools import cache
 from pathlib import Path
 
-stones = Path("data.txt").read_text().strip().split()
+stones = Path("day11.txt").read_text().strip().split()
 
 
 @cache

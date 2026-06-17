@@ -1,7 +1,7 @@
 # Part 1
 import pathlib
 
-num_lists = pathlib.Path("data.txt").read_text().splitlines()
+num_lists = pathlib.Path("day09.txt").read_text().splitlines()
 
 nums = [list(map(int, line.split())) for line in num_lists]
 

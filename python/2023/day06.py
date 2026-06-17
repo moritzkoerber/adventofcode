@@ -2,7 +2,7 @@
 import math
 import pathlib
 
-races = pathlib.Path("data.txt").read_text().splitlines()
+races = pathlib.Path("day06.txt").read_text().splitlines()
 wins = dict.fromkeys(zip(*[map(int, e.split()[1:]) for e in races]), 0)
 
 

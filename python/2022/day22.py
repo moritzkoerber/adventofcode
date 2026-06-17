@@ -6,7 +6,7 @@ import pathlib
 import re
 from functools import partial
 
-*input_map, _, moves = pathlib.Path("data.txt").read_text().splitlines()
+*input_map, _, moves = pathlib.Path("day22.txt").read_text().splitlines()
 moves = re.split("([LR])", moves)
 
 grid = {}

@@ -2,7 +2,7 @@
 import pathlib
 import re
 
-lines = pathlib.Path("data.txt").read_text().splitlines()
+lines = pathlib.Path("day01.txt").read_text().splitlines()
 
 print(
     sum(

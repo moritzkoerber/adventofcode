@@ -2,7 +2,7 @@
 from functools import cache
 from pathlib import Path
 
-towels, designs = Path("data.txt").read_text().split("\n\n")
+towels, designs = Path("day19.txt").read_text().split("\n\n")
 towels, designs = towels.split(", "), designs.splitlines()
 
 

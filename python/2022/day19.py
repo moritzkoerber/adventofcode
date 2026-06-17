@@ -2,7 +2,7 @@
 ## Part 1
 import re
 
-with open("data.txt") as f:
+with open("day19.txt") as f:
     blueprints = [list(map(int, re.findall(r"\d+", e))) for e in f.read().splitlines()]
 
 

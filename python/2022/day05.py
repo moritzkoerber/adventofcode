@@ -2,7 +2,7 @@
 ## Part 1
 import re
 
-with open("data.txt") as f:
+with open("day05.txt") as f:
     moves = f.read().splitlines()
 
 with open("stack.txt") as f:

@@ -3,7 +3,7 @@ import itertools
 from heapq import heappop, heappush
 from pathlib import Path
 
-p_input = Path("data.txt").read_text().splitlines()
+p_input = Path("day20.txt").read_text().splitlines()
 
 grid = {}
 

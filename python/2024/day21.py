@@ -2,7 +2,7 @@
 from functools import cache
 from pathlib import Path
 
-p_input = Path("data.txt").read_text().splitlines()
+p_input = Path("day21.txt").read_text().splitlines()
 
 num_pad = {
     col: (i, j)

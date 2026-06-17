@@ -2,7 +2,7 @@
 from collections import defaultdict
 from pathlib import Path
 
-p_input = list(map(int, Path("data.txt").read_text().splitlines()))
+p_input = list(map(int, Path("day22.txt").read_text().splitlines()))
 
 
 def transform(secret_num: int) -> int:

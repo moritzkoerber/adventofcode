@@ -1,7 +1,7 @@
 # Part 1, 2
 import pathlib
 
-galaxy_map = pathlib.Path("data.txt").read_text().splitlines()
+galaxy_map = pathlib.Path("day11.txt").read_text().splitlines()
 
 galaxies = [
     (i, j)

@@ -1,7 +1,7 @@
 # Part 1
 from pathlib import Path
 
-incoming_bytes = list(map(eval, Path("data.txt").read_text().splitlines()))
+incoming_bytes = list(map(eval, Path("day18.txt").read_text().splitlines()))
 
 
 def solve(x: int, y: int, grid_size: int, visited: set[tuple[int, int]]) -> int:

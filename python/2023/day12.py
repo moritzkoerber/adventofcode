@@ -3,7 +3,7 @@ import pathlib
 import re
 from functools import cache
 
-springs = pathlib.Path("data.txt").read_text().splitlines()
+springs = pathlib.Path("day12.txt").read_text().splitlines()
 number_regex = re.compile(r"\d+")
 
 

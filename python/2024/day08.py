@@ -3,7 +3,7 @@ from collections import defaultdict
 from itertools import permutations, product
 from pathlib import Path
 
-grid = Path("data.txt").read_text().splitlines()
+grid = Path("day08.txt").read_text().splitlines()
 grid_v, grid_h = len(grid), len(grid[0])
 
 antennas = defaultdict(list)

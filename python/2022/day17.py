@@ -2,7 +2,7 @@
 ## Part 1
 import itertools
 
-with open("data.txt") as f:
+with open("day17.txt") as f:
     jet_seq = [1 if x == ">" else -1 for x in f.read()]
 
 

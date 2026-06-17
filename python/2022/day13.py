@@ -1,7 +1,7 @@
 # Python
 ## Part 1
 
-with open("data.txt") as f:
+with open("day13.txt") as f:
     content = f.read()
     parsed_packets = [
         [eval(x) for x in p] for p in map(str.splitlines, content.split("\n\n"))

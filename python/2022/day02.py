@@ -1,6 +1,6 @@
 # Python
 ## Part 1
-with open("data.txt") as f:
+with open("day02.txt") as f:
     games = f.read().replace(" ", "").splitlines()
 
 outcomes_numeric = [(ord(i) - 64, ord(j) - 64 - 23) for i, j in games]

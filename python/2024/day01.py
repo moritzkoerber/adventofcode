@@ -1,7 +1,7 @@
 # Part 1
 import pathlib
 
-p_input = pathlib.Path("data.txt").read_text()
+p_input = pathlib.Path("day01.txt").read_text()
 
 arrays = [int(num) for line in p_input.splitlines() for num in line.split()]
 array_left, array_right = sorted(arrays[::2]), sorted(arrays[1::2])

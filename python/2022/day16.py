@@ -7,7 +7,7 @@ from collections import defaultdict
 
 pattern = re.compile(r"[A-Z]{2}|\d+")
 
-with open("data.txt") as f:
+with open("day16.txt") as f:
     input_valves = f.read()
 
 valves = {

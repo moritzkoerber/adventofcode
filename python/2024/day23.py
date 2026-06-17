@@ -2,7 +2,7 @@
 from collections import defaultdict
 from pathlib import Path
 
-p_input = Path("data.txt").read_text().splitlines()
+p_input = Path("day23.txt").read_text().splitlines()
 
 conns = defaultdict(set)
 

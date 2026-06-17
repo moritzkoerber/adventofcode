@@ -1,7 +1,7 @@
 # Part 1
 import pathlib
 
-grid_input = pathlib.Path("data.txt").read_text().splitlines()
+grid_input = pathlib.Path("day14.txt").read_text().splitlines()
 
 grid_height, grid_width = len(grid_input), len(grid_input[0])
 grid = [list(line) for line in grid_input]

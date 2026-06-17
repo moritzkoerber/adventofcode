@@ -4,7 +4,7 @@ import pathlib
 import re
 from itertools import count, cycle
 
-lines = pathlib.Path("data.txt").read_text()
+lines = pathlib.Path("day08.txt").read_text()
 
 dirs, maps = lines.split("\n\n")
 

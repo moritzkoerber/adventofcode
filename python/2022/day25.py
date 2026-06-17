@@ -2,7 +2,7 @@
 ## Part 1
 import pathlib
 
-snafus = pathlib.Path("data.txt").read_text().splitlines()
+snafus = pathlib.Path("day25.txt").read_text().splitlines()
 
 from_snafu = {"0": 0, "1": 1, "2": 2, "-": -1, "=": -2}
 

@@ -4,7 +4,7 @@ import re
 from collections import defaultdict
 from functools import reduce
 
-init_sequence = pathlib.Path("data.txt").read_text().rstrip("\n").split(",")
+init_sequence = pathlib.Path("day15.txt").read_text().rstrip("\n").split(",")
 
 
 def calc_hash(string: str) -> int:

@@ -2,7 +2,7 @@
 from collections import deque
 from pathlib import Path
 
-p_input = Path("data.txt").read_text().splitlines()
+p_input = Path("day12.txt").read_text().splitlines()
 
 grid = {(i, j): plot for i, row in enumerate(p_input) for j, plot in enumerate(row)}
 

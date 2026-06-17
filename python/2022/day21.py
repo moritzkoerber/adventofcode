@@ -4,7 +4,7 @@ import pathlib
 
 import sympy
 
-input_data = pathlib.Path("data.txt").read_text()
+input_data = pathlib.Path("day21.txt").read_text()
 
 monkeys = dict([e.split(": ") for e in input_data.splitlines()])
 

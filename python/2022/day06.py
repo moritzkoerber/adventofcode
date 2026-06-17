@@ -1,6 +1,6 @@
 # Python
 ## Part 1
-with open("data.txt") as f:
+with open("day06.txt") as f:
     signal = f.read()
 
 

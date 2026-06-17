@@ -2,7 +2,7 @@
 ## Part 1
 from heapq import heappop, heappush
 
-with open("data.txt") as f:
+with open("day12.txt") as f:
     letters = f.read()
 
 for i, j in enumerate(letters.splitlines()):

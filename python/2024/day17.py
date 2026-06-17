@@ -2,7 +2,7 @@
 import re
 from pathlib import Path
 
-a, b, c, *instructions = map(int, re.findall(r"\d+", Path("data.txt").read_text()))
+a, b, c, *instructions = map(int, re.findall(r"\d+", Path("day17.txt").read_text()))
 
 
 def run_program(a: int, b: int, c: int, instructions: list[int]) -> str:

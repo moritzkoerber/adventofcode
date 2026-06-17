@@ -2,7 +2,7 @@
 ## Part 1
 import re
 
-with open("data.txt") as f:
+with open("day04.txt") as f:
     assignments = f.read().splitlines()
 
 numeric_assignments = [[int(e) for e in re.split(r"[,-]", a)] for a in assignments]

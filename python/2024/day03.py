@@ -2,7 +2,7 @@
 import re
 from pathlib import Path
 
-p_input = Path("data.txt").read_text()
+p_input = Path("day03.txt").read_text()
 
 
 def sum_multiplications(instructions: str) -> int:

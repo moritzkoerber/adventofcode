@@ -3,7 +3,7 @@
 import itertools
 from collections import deque
 
-with open("data.txt") as f:
+with open("day18.txt") as f:
     input_droplets = {tuple(map(int, x.split(","))) for x in f.read().splitlines()}
 
 

@@ -5,7 +5,7 @@ from collections.abc import Generator
 from heapq import heappop, heappush
 from pathlib import Path
 
-p_input = Path("data.txt").read_text().splitlines()
+p_input = Path("day16.txt").read_text().splitlines()
 
 
 def calc_neighbors(

@@ -2,7 +2,7 @@
 from itertools import zip_longest
 from pathlib import Path
 
-p_input = Path("data.txt").read_text().strip()
+p_input = Path("day09.txt").read_text().strip()
 
 
 def calc_checksum(p_input: str, is_part1: bool) -> int:

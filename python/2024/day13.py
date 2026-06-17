@@ -3,7 +3,7 @@ import re
 from functools import cache
 from pathlib import Path
 
-p_input = Path("data.txt").read_text().split("\n\n")
+p_input = Path("day13.txt").read_text().split("\n\n")
 
 
 @cache

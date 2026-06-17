@@ -1,7 +1,7 @@
 # Part 1
 import pathlib
 
-seeds, *mappings = pathlib.Path("data.txt").read_text().split("\n\n")
+seeds, *mappings = pathlib.Path("day05.txt").read_text().split("\n\n")
 seeds = list(map(int, seeds.split()[1:]))
 
 res = []

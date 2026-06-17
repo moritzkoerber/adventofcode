@@ -1,6 +1,6 @@
 # Python
 ## Part 1
-with open("data.txt") as f:
+with open("day01.txt") as f:
     input_calories = f.read().split("\n\n")
 
 calories_by_elf = sorted(
@@ -20,7 +20,7 @@ print(sum(calories_by_elf[-3:]))
 import pandas
 
 calories_by_elf = (
-    pandas.read_table("data.txt", header=None, skip_blank_lines=False)
+    pandas.read_table("day01.txt", header=None, skip_blank_lines=False)
     .assign(elf_no=lambda x: x[0].isna().cumsum())
     .groupby("elf_no")
     .sum()[0]

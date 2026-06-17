@@ -3,7 +3,7 @@ from pathlib import Path
 
 grid = {
     (i, j): int(col)
-    for i, row in enumerate(Path("data.txt").read_text().splitlines())
+    for i, row in enumerate(Path("day10.txt").read_text().splitlines())
     for j, col in enumerate(row)
 }
 

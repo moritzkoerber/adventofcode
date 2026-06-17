@@ -1,7 +1,7 @@
 # Part 1
 from pathlib import Path
 
-p_input, moves = Path("data.txt").read_text().split("\n\n")
+p_input, moves = Path("day15.txt").read_text().split("\n\n")
 moves = moves.replace("\n", "")
 
 

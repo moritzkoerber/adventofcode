@@ -1,7 +1,9 @@
 # Part 1
 import pathlib
 
-patterns = list(map(str.splitlines, pathlib.Path("data.txt").read_text().split("\n\n")))
+patterns = list(
+    map(str.splitlines, pathlib.Path("day13.txt").read_text().split("\n\n"))
+)
 
 
 def check_reflection(grid: list[str], part2: bool = False) -> int:

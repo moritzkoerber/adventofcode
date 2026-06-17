@@ -4,7 +4,7 @@ import re
 
 pattern = re.compile(r"-?\d+")
 
-with open("data.txt") as f:
+with open("day15.txt") as f:
     parsed_input = [
         [int(x) for x in p] for p in map(pattern.findall, f.read().splitlines())
     ]

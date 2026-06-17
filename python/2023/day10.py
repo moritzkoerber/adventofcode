@@ -2,7 +2,7 @@
 import math
 import pathlib
 
-grid = pathlib.Path("data.txt").read_text().splitlines()
+grid = pathlib.Path("day10.txt").read_text().splitlines()
 
 
 def move(

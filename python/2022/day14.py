@@ -2,7 +2,7 @@
 ## Part 1
 import copy
 
-with open("data.txt") as f:
+with open("day14.txt") as f:
     rocks = [[eval(i) for i in x.split(" -> ")] for x in f.read().splitlines()]
 
 rock_pos = set()

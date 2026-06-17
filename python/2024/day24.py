@@ -1,7 +1,7 @@
 # Part 1
 from pathlib import Path
 
-wires, gates = Path("data.txt").read_text().split("\n\n")
+wires, gates = Path("day24.txt").read_text().split("\n\n")
 wires = {k: int(v) for k, v in [state.split(": ") for state in wires.splitlines()]}
 
 rules = {"AND": lambda x, y: x & y, "OR": lambda x, y: x | y, "XOR": lambda x, y: x ^ y}

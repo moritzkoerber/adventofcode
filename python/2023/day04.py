@@ -2,7 +2,7 @@
 import pathlib
 import re
 
-tinput = pathlib.Path("data.txt").read_text().splitlines()
+tinput = pathlib.Path("day04.txt").read_text().splitlines()
 
 pattern = re.compile(r"\d+")
 

@@ -3,7 +3,7 @@ import math
 import pathlib
 from collections import defaultdict
 
-grid = pathlib.Path("data.txt").read_text().splitlines()
+grid = pathlib.Path("day03.txt").read_text().splitlines()
 
 dim1, dim2 = len(grid) - 1, len(grid[0]) - 1
 

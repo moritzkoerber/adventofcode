@@ -1,7 +1,7 @@
 # Part 1
 from pathlib import Path
 
-grid = Path("data.txt").read_text().splitlines()
+grid = Path("day06.txt").read_text().splitlines()
 
 grid_v, grid_h = len(grid), len(grid[0])
 

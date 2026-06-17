@@ -4,7 +4,7 @@ import pathlib
 import re
 from collections import defaultdict
 
-lines = pathlib.Path("data.txt").read_text().splitlines()
+lines = pathlib.Path("day02.txt").read_text().splitlines()
 shown = [re.findall(r"\b(\d+)\s(\w+)\b", line) for line in lines]
 
 print(

@@ -2,7 +2,7 @@
 ## Part 1
 import re
 
-with open("data.txt") as f:
+with open("day07.txt") as f:
     file_paths = f.read().splitlines()
 
 

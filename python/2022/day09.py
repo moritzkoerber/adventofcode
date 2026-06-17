@@ -1,6 +1,6 @@
 # Python
 ## Part 1
-with open("data.txt") as f:
+with open("day09.txt") as f:
     moves = list(map(str.split, f.read().splitlines()))
 
 move_dict = {"L": (-1, 0), "R": (1, 0), "D": (0, -1), "U": (0, 1)}

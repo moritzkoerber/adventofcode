@@ -18,7 +18,7 @@ class Monkey:
     inspect_count: int = 0
 
 
-with open("data.txt") as f:
+with open("day11.txt") as f:
     data = f.read().splitlines()
     chunks = [data[i : i + 7] for i in range(0, len(data), 7)]
     number_regex = re.compile(r"\d+")

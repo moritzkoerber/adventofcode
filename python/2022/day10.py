@@ -1,6 +1,6 @@
 # Python
 ## Part 1
-with open("data.txt") as f:
+with open("day10.txt") as f:
     instructions = map(str.split, f.read().splitlines())
 
 x = 1

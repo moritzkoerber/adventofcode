@@ -4,7 +4,7 @@ import itertools
 import pathlib
 
 input_map = [
-    row[1:-1] for row in pathlib.Path("data.txt").read_text().splitlines()[1:-1]
+    row[1:-1] for row in pathlib.Path("day24.txt").read_text().splitlines()[1:-1]
 ]
 length, width = len(input_map), len(input_map[0])
 
@@ -23,7 +23,7 @@ for i, j in enumerate(input_map):
             blizzards.append([i, k, l])
 
 
-def move_blizzards(y: int, x: int, dr: str) -> tuple[int, int, str]:
+def move_blizzards(y: int, x: int, dr: str) -> tuple[int, int, str] | None:
     match dr:
         case ">" | "<":
             return y, (x + directions[dr]) % width, dr

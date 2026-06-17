@@ -1,7 +1,7 @@
 # Part 1
 import pathlib
 
-contraption = pathlib.Path("data.txt").read_text().splitlines()
+contraption = pathlib.Path("day16.txt").read_text().splitlines()
 
 dirs = [(-1, 0), (0, 1), (1, 0), (0, -1)]
 

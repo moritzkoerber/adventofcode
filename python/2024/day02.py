@@ -1,7 +1,7 @@
 # Part 1
 from pathlib import Path
 
-p_input = Path("data.txt").read_text()
+p_input = Path("day02.txt").read_text()
 
 reports = [[int(num) for num in report.split()] for report in p_input.splitlines()]
 
