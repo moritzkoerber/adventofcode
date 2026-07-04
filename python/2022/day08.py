@@ -2,56 +2,63 @@
 ## Part 1
 
 with open("day08.txt") as f:
-    trees = f.read().splitlines()
+    trees = [list(map(int, tree_row)) for tree_row in f.read().splitlines()]
 
+visible = set()
+v = len(trees)
+h = len(trees[0])
 
-def calculate_visibility(tree_row: str) -> list[bool]:
-    m = max(tree_row)
-    return [
-        (i == 0)
-        or (i == len(tree_row) - 1)
-        or (i <= tree_row.index(m) and j > max(tree_row[:i]))
-        or (i >= tree_row.rfind(m) and j > max(tree_row[i + 1 :]))
-        for i, j in enumerate(tree_row)
-    ]
+for i in range(v):
+    max_t = -1
+    for j in range(h):
+        if trees[i][j] > max_t:
+            max_t = trees[i][j]
+            visible.add((i, j))
+    max_t = -1
+    for j in reversed(range(h)):
+        if trees[i][j] > max_t:
+            max_t = trees[i][j]
+            visible.add((i, j))
 
+for i in range(h):
+    max_t = -1
+    for j in range(v):
+        if trees[j][i] > max_t:
+            max_t = trees[j][i]
+            visible.add((j, i))
+    max_t = -1
+    for j in reversed(range(v)):
+        if trees[j][i] > max_t:
+            max_t = trees[j][i]
+            visible.add((j, i))
 
-horizontal_rows = [
-    tree_visibility
-    for tree_row in trees
-    for tree_visibility in calculate_visibility(tree_row)
-]
-
-trees_t = list(map("".join, zip(*trees)))
-
-vertical_rows = [
-    tree_visibility
-    for tree_row in zip(*map(calculate_visibility, trees_t))
-    for tree_visibility in tree_row
-]
-
-print(sum(i or j for i, j in zip(horizontal_rows, vertical_rows)))
-
+print(len(visible))
 
 ## Part 2
-def calculate_distance(tree_row: str) -> list[int]:
-    return [
-        ([e >= j for e in tree_row[1:i][::-1] + j].index(True) + 1)
-        * (i != 0)
-        * ([e >= j for e in tree_row[i + 1 : -1] + j].index(True) + 1)
-        * (i != len(tree_row) - 1)
-        for i, j in enumerate(tree_row)
-    ]
+max_scenic = 0
+for i in range(v):
+    for j in range(h):
+        r = l = d = u = 0
+        tree = trees[i][j]
 
+        for x in range(j + 1, h):
+            r += 1
+            if trees[i][x] >= tree:
+                break
+        for y in reversed(range(j)):
+            l += 1
+            if trees[i][y] >= tree:
+                break
 
-horizontal_rows = [
-    scenic_score for tree_row in trees for scenic_score in calculate_distance(tree_row)
-]
+        for k in range(i + 1, v):
+            d += 1
+            if trees[k][j] >= tree:
+                break
+        for z in reversed(range(i)):
+            u += 1
+            if trees[z][j] >= tree:
+                break
 
-vertical_rows = [
-    scenic_score
-    for tree_row in zip(*map(calculate_distance, trees_t))
-    for scenic_score in tree_row
-]
+        max_scenic = max(max_scenic, r * l * d * u)
 
-print(max(i * j for i, j in zip(horizontal_rows, vertical_rows)))
+print(max_scenic)
