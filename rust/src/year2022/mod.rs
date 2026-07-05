@@ -1,6 +1,7 @@
 pub mod day01;
 pub mod day02;
 pub mod day03;
+pub mod day04;
 pub mod day08;
 
 pub fn run(day: &str) {
@@ -8,6 +9,7 @@ pub fn run(day: &str) {
         "01" => day01::run(),
         "02" => day02::run(),
         "03" => day03::run(),
+        "04" => day04::run(),
         "08" => day08::run(),
         _ => {
             eprintln!("Day 2022/{day} not implemented");
