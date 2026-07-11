@@ -1,5 +1,6 @@
 mod input;
 mod year2022;
+mod year2023;
 
 fn main() {
     let args: Vec<String> = std::env::args().collect();
@@ -15,6 +16,7 @@ fn main() {
 
     match year {
         "2022" => year2022::run(day),
+        "2023" => year2023::run(day),
         _ => {
             eprintln!("Year {year} not implemented");
             std::process::exit(1);
