@@ -14,6 +14,7 @@ fn count_overlap<const N: usize>(compartments: [&str; N]) -> i32 {
 }
 
 pub fn run() {
+    // Part 1
     let compartments = crate::input::read(2022, 3);
 
     let mut total = 0;
@@ -24,6 +25,7 @@ pub fn run() {
     }
     println!("{}", total);
 
+    // Part 2
     total = 0;
     let lines: Vec<&str> = compartments.lines().collect();
     let l = lines.len();

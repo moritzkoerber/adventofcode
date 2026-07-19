@@ -1,4 +1,5 @@
 pub fn run() {
+    // Part 1
     let p_input = crate::input::read(2022, 2);
     let mut outcomes_numeric = Vec::new();
 
@@ -12,7 +13,6 @@ pub fn run() {
         }
     }
 
-    // Part 1
     let mut total = 0;
     for (i, j) in &outcomes_numeric {
         let res = match j - i {

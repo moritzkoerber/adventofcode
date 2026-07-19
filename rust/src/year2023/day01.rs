@@ -3,6 +3,7 @@ use std::collections::HashMap;
 use std::fs;
 
 pub fn run() {
+    // Part 1
     let p_input = fs::read_to_string("data/2023/day01.txt")
         .unwrap_or_else(|err| panic!("couldn't read data: {}", err));
     let re_part1 = Regex::new(r"\d").unwrap();
@@ -18,6 +19,7 @@ pub fn run() {
         .sum();
     println!("{part1}");
 
+    // Part 2
     let mut digits = HashMap::new();
 
     digits.insert(String::from("one"), "1");

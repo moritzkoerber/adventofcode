@@ -4,6 +4,7 @@
 use std::collections::HashSet;
 
 pub fn run() {
+    // Part 1
     let input = crate::input::read(2022, 8);
     let p_input: Vec<Vec<i16>> = input
         .lines()
@@ -56,6 +57,7 @@ pub fn run() {
     }
     println!("{}", visible.len());
 
+    // Part 2
     let mut scenic: u32 = 0;
 
     for i in 1..(v - 1) {

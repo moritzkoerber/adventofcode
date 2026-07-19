@@ -1,5 +1,5 @@
-// Part 1 + 2
 pub fn run() {
+    // Part 1 + 2
     let p_input = crate::input::read(2022, 1);
     let mut calories_by_elf: Vec<u32> = p_input
         .split("\n\n")
